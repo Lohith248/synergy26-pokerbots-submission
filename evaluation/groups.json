@@ -1,0 +1,5 @@
+{"family": ["fable5_b","fable_g","fable_h2","fable_a","nova_t7","nova_tight","sh_champ_agg","sh_champ_tight","sh_champ_size","sh_t7_agg","sh_t7_tight"],
+ "c32fam": ["c32","c34","c32_donk","c32_slowplay","c35_base","sh_c32_agg","sh_c32_tight"],
+ "astra": ["astra_exploit","astra_hybrid","astra_eq","sh_astra_ex","sh_astra_hy","sh_astra_eq"],
+ "outsider": ["x_gto","x_discard","x_human","x_adapt","z_opus_serious_2","x_maniac","x_rock","x_edge"],
+ "punish": ["x_punish","x_float"]}
