@@ -70,25 +70,25 @@ Raises close to all-in become all-in.
 
 ## 3. How we developed it
 
-1. **First bot from the rules alone.** We wrote the first version, "nova", directly from the problem statement and protocol specification. We built a local match runner on top of the organiser engine.
+1. **Two designs, written from the rules.** Our first bot (candidate1, 6 Nov) used a keep score, sampled equities and a preflop table. On 12 Nov we wrote a second design, "nova", directly from the problem statement and protocol specification. Nova beat the first line in our lab, so the final bot descends from it. Every version is in [`history/`](history/README.md), with its real file date.
 2. **A large test field.** We collected over 120 opponents:
-   - our own earlier bots and variants;
-   - simple styles (calling station, maniac, rock, jam-or-fold, min-bet pest, slow-player);
-   - "punisher" bots written to attack a fixed strategy;
-   - shifted copies of strong bots.
+    - our own earlier bots and variants;
+    - simple styles (calling station, maniac, rock, jam-or-fold, min-bet pest, slow-player);
+    - "punisher" bots written to attack a fixed strategy;
+    - shifted copies of strong bots.
 
-   This guards against tuning to one opponent.
+    This guards against tuning to one opponent.
 3. **Duplicate, paired testing on a 6-machine lab (112 cores).** Every match is played like the real tournament: two legs, cards swapped, fresh processes, Stage 1 and Stage 2 lengths. Each candidate plays the **same opponents on the same deals** as the current champion. The comparison is therefore paired, which removes most card luck.
 4. **The metric is match wins, as in the rulebook.** Stage 2 standings decide the prizes, so a challenger had to win more Stage 2 matches than the champion on fresh deals, over at least two independent runs. Chips per hand were used only as a screen.
 5. **Safety gates for any challenger:**
-   - 0 forfeits and 0 engine notices;
-   - a stress set of 24 matches;
-   - start-up under 1.5 s;
-   - average time at most 1.05 times the champion's;
-   - Stage 1 not clearly worse;
-   - a code review of the diff.
+    - 0 forfeits and 0 engine notices;
+    - a stress set of 24 matches;
+    - start-up under 1.5 s;
+    - average time at most 1.05 times the champion's;
+    - Stage 1 not clearly worse;
+    - a code review of the diff.
 
-Over the project we tested several hundred variants. On the final day alone, the lab played about 120,000 two-leg matches.
+From 6 to 15 November we built and tested dozens of bot versions; on the final day alone we tested over 100 variants in about 120,000 two-leg lab matches.
 
 ## 4. What we tried and what won
 
@@ -171,4 +171,5 @@ reproduce/                 previous champion + build.py that rebuilds bot.py exa
 evaluation/                scripts that compute the tables + raw records of the final-day runs
 docs/full-lab-log.md       complete evidence log of the final day (every run and candidate)
 docs/code-review.md        independent review of the final changes and stress results
+history/                   earlier versions of the bot, 6-14 Nov, with their real file dates
 ```
