@@ -1,0 +1,27 @@
+make_final_zip 2026-11-15 21:30:30 python 3.10.11 bot-python C:/Users/jagat/AppData/Local/Programs/Python/Python311/python.exe
+[1] source C:\Users\jagat\Desktop\SYNERGY\Pokerbots\development\zoo\push\final_submit\bot.py
+    bot.py sha256 7bfe5231831fe29e7585fb3fa7608799d82e03653204b44d1da6554b0cef3da8  size 33609 bytes
+    encoding: pure ASCII
+    line endings: LF (CRLF 0, LF 729, lone CR 0)
+    compile(): ok
+    imports: itertools, json, math, numpy, random, sys
+[2] wrote C:\Users\jagat\Desktop\SYNERGY\Pokerbots\development\zoo\push\final\SUBMIT_f_n45.zip
+[3] entries: ['bot.py']
+    extracted bot.py sha256 matches source
+    ZIP size 10338 bytes (limit 5242880)
+    ZIP sha256 b3eb2f4228f3b0cad807984f895f29292dd8d0939e7f2463607b12dfe783c252
+    extracted to C:\Users\jagat\AppData\Local\Temp\finalzip_d3ux_oxd\SUBMIT_f_n45
+[4] tools/verify_pkg.py C:\Users\jagat\AppData\Local\Temp\finalzip_d3ux_oxd\SUBMIT_f_n45 <sha>: exit 0
+    bot sha256 7bfe5231831fe29e7585fb3fa7608799d82e03653204b44d1da6554b0cef3da8
+    diff vs candidate20: +704 / -2206 lines
+[5] organiser engine matches (time numbers unreliable: PC busy)
+    stage 1 seed 7001 ours=A vs bot.py: rc 0 | A  ..\..\..\..\..\AppData\Local\Temp\finalzip_d3ux_oxd\SUBMIT_f_n45\bot.py net   +5295   time used   1.96 s (bank 30 s per leg)   notices 0 | Result: A wins -> ok
+    stage 2 seed 7002 ours=B vs bot.py: rc 0 | B  ..\..\..\..\..\AppData\Local\Temp\finalzip_d3ux_oxd\SUBMIT_f_n45\bot.py net  +16803   time used  16.03 s (bank 75 s per leg)   notices 0 | Result: B wins -> ok
+    stage 1 seed 7003 ours=A vs example_bots\random_bot.py: rc 0 | A  ..\..\..\..\..\AppData\Local\Temp\finalzip_d3ux_oxd\SUBMIT_f_n45\bot.py net   +4167   time used   0.00 s (bank 30 s per leg)   notices 0 | Result: A wins -> ok
+[6] stand-alone protocol checks
+    stdin closed: exit 0, stdout 0 bytes, stderr 0 bytes, start-up+exit 0.50 s (limit 5 s start-up)
+    message sequence: exit 0, 2 reply lines, stderr 0 bytes, wall 0.52 s
+      reply: {"type": "action", "action": "call"}
+      reply: {"type": "discard", "card": "7c"}
+    replies legal (action in fold/call, discard is a hole card)
+VERIFY PASS
